@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+<h1>My Library</h1>
+
+<!--<p>-->
+<!--    {{ books[0]['title'] }}-->
+<!--</p>-->
+<!--{% if books|length < 0 %}-->
+<!--{% else %}-->
+<!--{% if books is defined %}-->
+<!--<h1>DEFINED</h1>-->
+<!--{% else %}-->
+<!--    <h1>NOT DEFINED</h1>-->
+<!--{% endif %}-->
+
+    <ul>
+        {% for book in books %}
+        <li>{{ book['title'] }} - {{ book['author'] }} - {{ book['rating'] }}/10</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<a href="">Add New Book</a>
+</body>
+</html>
